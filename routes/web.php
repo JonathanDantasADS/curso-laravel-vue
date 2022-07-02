@@ -16,6 +16,16 @@ use Illuminate\Support\Facades\Route;
     Route::get('/', 'PrincipalController@principal');
     Route::get('/sobre-nos', 'SobreNosController@sobreNos');
     Route::get('/contato', 'ContatoController@contato');
+    // Nome, categoria, assunto, mensagem
+
+
+    Route::get('/contato/{nome}/{inventario}/{desc?}', function(
+            string $nome, 
+            string $inventario, 
+            string $desc = "Mensagem não informada") {
+
+        return "Listagem de diretório $nome / $inventario / $desc ";
+    });
 
 /* verbo http
 
