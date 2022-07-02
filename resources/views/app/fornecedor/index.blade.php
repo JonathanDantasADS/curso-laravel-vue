@@ -2,19 +2,31 @@
 
 {{-- Fica o comentário que será descartado pelo interpretador do blade --}}
 
-{{-- Funciona da mesma forma --}}
-{{ 'Texto' }}
-<?= 'Texto' ?>
-
 {{-- Bloco puro do PHP --}}
 @php
 
+
 @endphp
 
-@if(count($fornecedores) > 0 && count($fornecedores) < 10)
-    <h3>Existem alguns fornecedores cadastrados</h3>
-@elseif(count($fornecedores) > 10)
-    <h3>Existem vários fornecedores cadastrados</h3>
+
+{{-- @unless executa se o retorno for false --}}
+
+Fornecedor: {{ $fornecedores[0]['nome'] }}
+<br>
+Status: {{ $fornecedores[0]['status'] }}
+<br>
+
+@if($fornecedores[0]['status'] == 'N')
+    Fornecedor tem status Negativo
+@elseif($fornecedores[0]['status'] == 'S')
+    Fornecedor tem status Positivo
 @else
-    <h3>Ainda não existem fornecedores cadastrados</h3>
+    Fornecedor não cadastrado
 @endif
+
+<br>
+
+@unless($fornecedores[0]['status'] == 'S') 
+    Fornecedor tem status Negativo
+@endunless
+<br>
