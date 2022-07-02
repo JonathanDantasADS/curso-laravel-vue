@@ -8,6 +8,7 @@ class FornecedorController extends Controller
 {
     public function index(){
         $fornecedores = [
+            'Fornecedor 0',
             'Fornecedor 1',
             'Fornecedor 2',
             'Fornecedor 3',
