@@ -13,24 +13,11 @@
 
     <div class="informacao-pagina">
         <div class="contato-principal">
-            <form action={{ route('site.contato') }} method="get">
-                <input type="text" name="nome" placeholder="Nome" class="borda-preta">
-                <br>
-                <input type="text" name="telefone" placeholder="Telefone" class="borda-preta">
-                <br>
-                <input type="text" name="email" placeholder="E-mail" class="borda-preta">
-                <br>
-                <select class="borda-preta" name="motivo_contato">
-                    <option value="1">Qual o motivo do contato?</option>
-                    <option value="2">Dúvida</option>
-                    <option value="3">Elogio</option>
-                    <option value="4">Reclamação</option>
-                </select>
-                <br>
-                <textarea name="mensagem" class="borda-preta">Preencha aqui a sua mensagem</textarea>
-                <br>
-                <button type="submit" class="borda-preta">ENVIAR</button>
-            </form>
+        {{-- Incluindo form_contato nesse bloco --}}
+        @component('site.layouts._components.form_contato',['classe' => 'borda-preta'])
+            <p>A nossa equipe analisará a sua mensagem e retornaremos o mais rápido possível</p>
+            <p>Nosso tempo médio de resposta é de 48 horas</p>
+        @endcomponent
         </div>
     </div>  
 </div>
