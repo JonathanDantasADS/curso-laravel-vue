@@ -42,9 +42,9 @@ use Illuminate\Support\Facades\Route;
         echo 'Rota 1';
     })->name('site.rota1');
 
-    // Route::get('/rota2', function() {
-    //     echo 'Rota 2';
-    // })->name('site.rota2');
+    Route::get('/rota2', function() {
+        echo 'Rota 2';
+    })->name('site.rota2');
 
                 // (origem, destino)
     Route::redirect('/rota2', '/rota1');
