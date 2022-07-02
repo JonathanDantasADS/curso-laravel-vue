@@ -8,7 +8,6 @@
 
 @endphp
 
-
 {{-- @unless executa se o retorno for false --}}
 
 Fornecedor: {{ $fornecedores[0]['nome'] }}
@@ -30,3 +29,4 @@ Status: {{ $fornecedores[0]['status'] }}
     Fornecedor tem status Negativo
 @endunless
 <br>
+
