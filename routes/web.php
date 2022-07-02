@@ -37,15 +37,12 @@ use Illuminate\Support\Facades\Route;
         })->name('app.produtos');
     });
 
+    Route::get('/teste/{p1}/{p2}','TesteController@teste')->name('teste');
 
-    Route::get('/rota1', function() {
-        echo 'Rota 1';
-    })->name('site.rota1');
-
-    // Route::get('/rota2', function() {
-    //     echo 'Rota 2';
-    // })->name('site.rota2');
-
-                // (origem, destino)
-    Route::redirect('/rota2', '/rota1');
+    // Rota de fallback, página personalizada caso o usuário digite o endereço errado
+    Route::fallback(function(){
+        echo 'A rota acessada não existe. 
+        <a href="'.route('site.index').'">Clique Aqui</a> 
+        para ir para a página inicial';
+    });
 
