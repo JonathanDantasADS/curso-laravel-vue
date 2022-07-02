@@ -39,6 +39,7 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('/teste/{p1}/{p2}','TesteController@teste')->name('teste');
 
+    
     // Rota de fallback, página personalizada caso o usuário digite o endereço errado
     Route::fallback(function(){
         echo 'A rota acessada não existe. 
