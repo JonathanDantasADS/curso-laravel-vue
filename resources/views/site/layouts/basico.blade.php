@@ -6,6 +6,11 @@
         <link rel="stylesheet" href="{{ asset('css/estilo_basico.css')}}">
     </head>
     <body>
+    
+        {{-- Diretório views/site/layouts/_partials/topo.blade.php --}}
+        @include('site.layouts._partials.topo')
+
+        {{-- Conteúdo --}}
         @yield('conteudo')
     </body>
 </html>
