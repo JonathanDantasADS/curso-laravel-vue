@@ -5,28 +5,32 @@
 {{-- Bloco puro do PHP --}}
 @php
 
+// {{-- if(empty($variavel)) {} --}} # Retorna true se a variável estiver vazia
+
+/*  - exemplos de vazio -
+        - '
+        -  0
+        -  0.0
+        -  '0'
+        -  null
+        -  false
+        -  array()
+        -  $var
+*/
 
 @endphp
 
 
-{{-- @unless executa se o retorno for false --}}
+@isset($fornecedores)
+    Fornecedor: {{ $fornecedores[0]['nome'] }}
+    <br>
+    Status: {{ $fornecedores[0]['status'] }}
+    <br>
 
-Fornecedor: {{ $fornecedores[0]['nome'] }}
-<br>
-Status: {{ $fornecedores[0]['status'] }}
-<br>
-
-@if($fornecedores[0]['status'] == 'N')
-    Fornecedor tem status Negativo
-@elseif($fornecedores[0]['status'] == 'S')
-    Fornecedor tem status Positivo
-@else
-    Fornecedor não cadastrado
-@endif
-
-<br>
-
-@unless($fornecedores[0]['status'] == 'S') 
-    Fornecedor tem status Negativo
-@endunless
-<br>
+    @isset($fornecedores[0]['cnpj'])
+        CNPJ: {{ $fornecedores[0]['cnpj'] }}
+        @empty($fornecedores[0]['cnpj'])
+        - Vazio
+        @endempty
+    @endisset
+@endisset
