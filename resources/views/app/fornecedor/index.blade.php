@@ -4,7 +4,7 @@
 
 {{-- Bloco puro do PHP --}}
 @php
-
+ 
 // {{-- if(empty($variavel)) {} --}} # Retorna true se a variável estiver vazia
 
 /*  - exemplos de vazio -
