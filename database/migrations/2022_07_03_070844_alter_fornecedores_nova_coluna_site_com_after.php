@@ -31,3 +31,4 @@ class AlterFornecedoresNovaColunaSiteComAfter extends Migration
         });
     }
 }
+ 
