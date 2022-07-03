@@ -13,7 +13,7 @@ class AlterFornecedoresNovaColunaSiteComAfter extends Migration
      */
     public function up()
     {
-        // criando a tabela filiais
+        // criando a tabela filiais 
         Schema::table('fornecedores', function(Blueprint $table){
             $table->string('site', 140)->after('nome')->nullable();
         });
