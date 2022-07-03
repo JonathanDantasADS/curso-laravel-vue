@@ -21,7 +21,8 @@ class CreateProdutoDetalhesTable extends Migration
             $table->float('altura', 8, 2);
             $table->timestamps();
 
-            // constraint -  A coluna produto_id, faz referencia ao ID da tabela produtos
+            // constraint -  A coluna produto_id, faz referencia ao ID da tabela produtos 
+            
             $table->foreign('produto_id')->references('id')->on('produtos');
             $table->unique('produto_id'); // Sem essa linha o relacionamento seria de 1 para N
         });
