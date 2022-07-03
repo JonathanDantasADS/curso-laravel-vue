@@ -12,7 +12,7 @@ class Fornecedor extends Model
                         'site', 
                         'uf', 
                         'email'
-                        
+                      
     ];
 }
 
