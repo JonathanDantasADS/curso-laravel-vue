@@ -25,6 +25,7 @@ class DropProdutoColumnsTable extends Migration
      */
     public function down()
     {
+        
         Schema::table('produtos', function(Blueprint $table){
             $table->decimal('preco_venda', 8, 2);
             $table->integer('estoque_minimo');
