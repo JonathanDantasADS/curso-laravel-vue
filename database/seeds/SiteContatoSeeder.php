@@ -12,13 +12,6 @@ class SiteContatoSeeder extends Seeder
      */
     public function run()
         {
-    //     $contato = new SiteContato();
-    //     $contato->nome = 'Novo Usuário';
-    //     $contato->telefone = '(11)96831-7988';
-    //     $contato->email = 'jonathandantas@gmail.com';
-    //     $contato->motivo_contato = 2;
-    //     $contato->mensagem = 'Essa mensagem é de teste';
-    //     $contato->save();
 
         SiteContato::create([
             'nome' => 'Novo Usuário1',
