@@ -13,7 +13,6 @@ class SiteContatoSeeder extends Seeder
     public function run()
         {
 
-
         SiteContato::create([
             'nome' => 'Novo Usuário1',
             'telefone' => '(11)96831-7989',
