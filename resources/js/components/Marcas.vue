@@ -56,7 +56,6 @@
     </div>
         <modal-component id="modalMarca" titulo="Adicionar Marca">
             <template v-slot:conteudo>
-
                 <div class="form-group">
                     <input-container-component
                         titulo="Nome da marca"
@@ -78,8 +77,7 @@
             <template v-slot:rodape>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn btn-primary">Salvar</button>
-            </template>
-                        
+            </template>          
         </modal-component>
 </div>
 </template>
