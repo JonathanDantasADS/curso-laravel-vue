@@ -16,7 +16,6 @@
         {{-- Incluindo form_contato nesse bloco --}}
         @component('site.layouts._components.form_contato',['classe' => 'borda-preta'])
             <p>A nossa equipe analisará a sua mensagem e retornaremos o mais rápido possível</p>
-            <p>Nosso tempo médio de resposta é de 48 horas</p>
         @endcomponent
         </div>
     </div>  
