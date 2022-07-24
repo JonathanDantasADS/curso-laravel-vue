@@ -16,7 +16,29 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+        Route::get('/clientes', function(){
+            return 'Clientes';
+        })->name('app.clientes');
+        
+        Route::get('/fornecedores', function(){
+            return 'Fornecedores';
+        })->name('app.fornecedores');
 
+        Route::get('/produtos', function(){
+            return 'Produtos';
+        })->name('app.produtos');
+    });
+
+    Route::get('/teste/{p1}/{p2}','TesteController@teste')->name('teste');
+
+    
+    // Rota de fallback, página personalizada caso o usuário digite o endereço errado
+    Route::fallback(function(){
+        echo 'A rota acessada não existe. 
+        <a href="'.route('site.index').'">Clique Aqui</a> 
+        para ir para a página inicial';
+    });
+=======
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
