@@ -18,6 +18,11 @@ class CreateMarcasTable extends Migration
             $table->string('nome', 30)->unique();
             $table->string('imagem', 100)->comment('Logo da marca');
             $table->timestamps();
+            $table->string('nome', 50);
+            $table->string('telefone', 14);
+            $table->string('email', 40);
+            $table->integer('motivo_contato');
+            $table->text('mensagem'); 
         });
     }
 
