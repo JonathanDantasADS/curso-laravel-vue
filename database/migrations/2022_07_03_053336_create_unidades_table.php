@@ -47,7 +47,6 @@ class CreateUnidadesTable extends Migration
 
             // remove primeiro a FK - Atenção na conversão 'tabela' + '_' + 'coluna' + '_' + 'foreign'
             $table->dropForeign('produto_detalhes_unidade_id_foreign');
-
             // Depois a coluna unidade_id
             $table->dropColumn('unidade_id');
         });
