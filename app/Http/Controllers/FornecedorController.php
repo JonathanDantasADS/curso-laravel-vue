@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+ 
 
 class FornecedorController extends Controller
 {
@@ -23,5 +24,6 @@ class FornecedorController extends Controller
     ];
 
         return view('app.fornecedor.index', compact('fornecedores'));
+        return view('app.fornecedor.index');
     }
 }
